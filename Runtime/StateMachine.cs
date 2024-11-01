@@ -26,13 +26,13 @@ namespace FiniteStateMachine
             if (transition != null)
                 ChangeState(transition.To);
 
-            _current.State?.Update();
+            _current.State?.OnStateUpdate();
             OnUpdateAction?.Invoke(Time.deltaTime);
         }
 
         public void FixedUpdate()
         {
-            _current.State?.FixedUpdate();
+            _current.State?.OnStateFixedUpdate();
             OnFixedUpdateAction?.Invoke(Time.fixedDeltaTime);
         }
 

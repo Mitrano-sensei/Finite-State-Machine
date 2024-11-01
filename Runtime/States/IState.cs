@@ -9,8 +9,17 @@ namespace FiniteStateMachine
         string Name { get; }
 
         void OnEnter();
-        void Update();
-        void FixedUpdate();
+        
+        /**
+         * Called on stateMachine.Update
+         * Note : Is not called "Update" so IState & MonoBehaviours works together
+         */
+        void OnStateUpdate();
+        
+        /**
+         * Called on stateMachine.FixedUpdate
+         */
+        void OnStateFixedUpdate();
         void OnExit();
     }
 

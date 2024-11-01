@@ -12,14 +12,14 @@ namespace FiniteStateMachine
         /**
          * Has to be called with the Update method of a StateMachine
          */
-        public virtual void Update() { 
+        public virtual void OnStateUpdate() { 
         
         }
 
         /**
          * Has to be called with the FixedUpdate method of a StateMachine
          */
-        public virtual void FixedUpdate() { 
+        public virtual void OnStateFixedUpdate() { 
         
         }
 

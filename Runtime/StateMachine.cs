@@ -32,7 +32,7 @@ namespace FiniteStateMachine
 
         public void FixedUpdate()
         {
-            _current.State?.OnStateFixedUpdate();
+            _current?.State?.OnStateFixedUpdate();
             OnFixedUpdateAction?.Invoke(Time.fixedDeltaTime);
         }
 

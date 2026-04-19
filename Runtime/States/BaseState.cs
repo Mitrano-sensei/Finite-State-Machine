@@ -6,8 +6,9 @@ namespace FiniteStateMachine
     [Serializable]
     public abstract class BaseState : IState
     {
-
-        public virtual string Name { get; protected set; }
+        private string _name = "";
+        public virtual string Name { get => _name.Length == 0 ? GetType().Name : _name; protected set => _name = value; }
+        
 
         /**
          * Has to be called with the Update method of a StateMachine
